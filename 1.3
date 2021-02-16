@@ -1,0 +1,62 @@
+#include <iostream>
+#include <conio>
+void tranpose(int[4][3]);
+void tampil(int[4][3]);
+void tampil2(int[3][4]);
+
+
+
+void main()
+{
+ int a[4][3];
+ for (int i=0;i<4;i++)
+ {  cout<endl;
+  for (int j=0;j<3;j++)
+  {
+   cout<<"Masukkan matriks ke : ["<<(i+1)<<"]["<<(j+1)<<"] :";
+   cin>>a[i][j];
+  }
+ }
+   cout<<"\nMatriksnya yaitu:";
+   tampil(a);
+   tranpose(a);
+ getch();
+}
+
+void tranpose(int a[4][3])
+{
+ int b[3][4];
+ for (int i=0;i<4;i++)
+ {
+  for (int j=0;j<3;j++)
+  {
+   b[j][i] = a[i][j];
+  }
+ }
+   cout<<"\nTranpose matriks yaitu:";
+   tampil2(b);
+}
+
+void tampil(int a[4][3])
+{
+ for (int i=0;i<4;i++)
+ {
+      cout<<endl;
+  for (int j=0;j<3;j++)
+  {
+   cout<<a[i][j]<<"   ";
+  }
+ }
+}
+
+void tampil2(int a[3][4])
+{
+ for (int i=0;i<3;i++)
+ {
+      cout<<endl;
+  for (int j=0;j<4;j++)
+  {
+   cout<<a[i][j]<<"   ";
+  }
+ }
+} 
