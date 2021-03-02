@@ -1,0 +1,76 @@
+#include<stdio.h>
+#include<windows.h>
+#include <math.h>
+
+struct
+{
+	int a,b,c,d;
+}
+bil;
+void kali()
+{
+	printf("\tPERKALIAN BILANGAN KOMPLEKS \t");
+	int angka1 = (bil.a * bil.c) - (bil.b * bil.d);
+	int angka2 = (bil.a *bil.d) + (bil.b * bil.c);
+	printf("Hasil perkalian dari (%d + %di) * (%d + %di) = (%d.%d - %d.%d)+(%d.%d + %d.%d)i adalah %d + %di",bil.a,bil.b,bil.c,bil.d,bil.a,bil.c,bil.b,bil.d,bil.a,bil.d,bil.b,bil.c,angka1, angka2);
+}
+void bagi()
+{
+	printf("\tPEMBAGIAN BILANGAN KOMPLEKS \t");
+	int angka1 = ((bil.a*bil.c)+(bil.b*bil.d));
+	int angka2 = (bil.a*bil.a)+(bil.b*bil.b);
+	int angka3 = ((bil.b*bil.c)-(bil.a*bil.d));
+	int angka4 = (bil.c*bil.c)+(bil.d*bil.d);
+	printf("Hasil pembagian dari (%d + %di)/(%d + %di) =[(%d.%d + %d.%d)/(%d.%d + %d.%d)]+[(%d.%d - %d.%d)/(%d.%d + %d.%d)i adalah (%d/%d)+(%d/%d)i",bil.a,bil.b,bil.c,bil.d,bil.a,bil.c,bil.b,bil.d,bil.a,bil.a,bil.b,bil.b,bil.b,bil.c,bil.a,bil.d,bil.c,bil.c,bil.d,bil.d,angka1,angka2,angka3,angka4);
+}
+void jumlah()
+{
+	printf("\tPENJUMLAHAN BILANGAN KOMPLEKS \t");
+	int angka1 = (bil.a + bil.c);
+	int angka2 = (bil.b + bil.d);
+	printf(
+	"Hasil penjumlahan dari (%d + %di) + (%d + %di) = (%d + %d)+(%d + %d)i adalah %d + %di",bil.a,bil.b,bil.c,bil.d,bil.a,bil.c,bil.b,bil.d,angka1,angka2);
+}
+void kurang()
+{
+	printf("\tPENGURANGAN BILANGAN KOMPLEKS \t");
+	int angka1 = (bil.a - bil.c);
+	int angka2 = (bil.b - bil.d);
+	printf(
+	"Hasil pengurangan dari (%d + %di) - (%d + %di) = (%d - %d)+(%d - %d)i adalah %d + %di",bil.a,bil.b,bil.c,bil.d,bil.a,bil.c,bil.b,bil.d,angka1, angka2);
+}
+int main()
+{
+	char hasil;
+	do
+	{
+		char menu;
+		system("cls");
+		printf("Masukkan bilangan A    : ");
+		scanf("%d",&bil.a);
+		printf("Masukkan bilangan B    : ");
+		scanf("%d",&bil.b);
+		printf("Masukkan bilangan C    : ");
+		scanf("%d",&bil.c);
+		printf("Masukkan bilangan D    : ");
+		scanf("%d",&bil.d);
+		printf("\tPilihan :         ");
+printf("\n1.Perkalian \n2.Pembagian \n3.Penjumlahan \n4.Pengurangan\n");
+		printf("\nPilih Menu : ");
+		scanf("%s",&menu);
+		if(menu=='1')
+			kali();
+		else if(menu=='2')
+			bagi();
+		else if(menu=='3')
+			jumlah();
+		else if(menu=='4')
+			kurang();
+		else
+			printf("Error, try again!!");
+		printf("\n Coba Lagi ? [y/t] ");
+		scanf("%s",&hasil);
+	}
+	while ((hasil=='Y' || hasil=='y'));
+	printf("\n\n SELESAI!");
+}
