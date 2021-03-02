@@ -1,0 +1,32 @@
+1.       float kurang(int A[], int B[], int x)
+{
+         float hasil=0;
+  for(int i=0; i<10; i++) 
+        hasil+=(A[i]-B[i])*(float)pow(x,i);
+        return hasil;
+}
+ --------------------------------------------------------------
+2.       float kali(int A[], int B[], int x)
+{
+  float hasil=0;
+         for(int i=0; i<10; i++) 
+          for(int j=0; j<10; j++)
+           hasil+=(A[i]*B[j])*(float)pow(x,(i+j));
+         return hasil;
+}
+ --------------------------------------------------------------
+3.       float turun(int A[], int x)
+{
+  float hasil=0; 
+                 for(int i=1; i<10; i++) 
+        hasil+=(A[i]*i)*(float)pow(x,i-1);
+        return hasil;
+}
+------------------------------------------------------------
+4. float tambah (int P1[], int P[2], int x)
+{
+   float hasil=1.0;
+   for(int i=0; i<10; i++)
+         hasil+=(P[i]+P2[i])*pow(x,i);
+   return hasil;
+}
