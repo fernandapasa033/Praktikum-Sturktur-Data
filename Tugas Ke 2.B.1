@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
-void baliknama();
+void baliktulisan();
 
 int main()
 {
-    baliknama();
+    baliktulisan();
 }
 
 void baliknama ()
 {int i,j, count;
   char nama[30];
-  cout << "program membalik nama";
-  cout << "\n\nMasukkan nama Anda = "; cin.ignore (); cin.getline(nama,sizeof(nama));
+  cout << "program membalik Tulisan";
+  cout << "\n\nMasukkan tulisan Anda = "; cin.ignore (); cin.getline(tulisan,sizeof(tulisan));
   cout << endl;
 
-  for (i=0; i<=nama[i];i++)
+  for (i=0; i<=tulisan[i];i++)
   {
   count = i+1;
   }
-  cout << "Nama terbalik anda = "; 
+  cout << "Tulisan terbalik anda = "; 
   for (j=count; j>=0;j--)
   {
-  cout << nama[j];
+  cout << tulisan[j];
   }
   cout <<endl;
 }
