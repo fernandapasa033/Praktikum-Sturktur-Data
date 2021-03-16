@@ -2,25 +2,21 @@
 using namespace std;
  
 int main () {
-int a = 0; //banyaknya element data
-int i; //untuk iterasi for
+int a = 0; 
+int i; 
 int sum = 0, max = 0, min = 0;
  
-//minta user input banyaknya data
 cout << "Banyaknya element yang akan diinput :";
 cin >> a;
  
-//bikin array dengan panjang a
 int data[a];
  
-//minta user input untuk tiap-tiap element
 for(i=0; i<a; i++) {
 cout << "Input element ke ";
 cout << i+1;
 cout << " : ";
 cin >> data[i];
 }
-//pake array
 cout << "\n Pake Array :";
 cout << "\n data yang anda masukan adalah "; 
 max = min = data[0];
@@ -40,7 +36,6 @@ cout << "\n terkecil :" << min;
 cout << "\n terbesar : " << max;
 cout << "\n================================\n";
  
-//memakai pointer
 sum = 0;
 int *ptr;
 ptr = data;
