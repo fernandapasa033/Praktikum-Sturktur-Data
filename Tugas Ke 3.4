@@ -50,11 +50,7 @@ int del (){
 
 void display (){
 	struct node *p;
-	
-//	if (front == NULL){
-//		cout << "Ruang antrian kosong";
-//		return;
-//	}
+}
 
 	p = front;
 	cout << "\nQueue Elements: ";
@@ -74,8 +70,8 @@ int main (){
 		cout << "\t\t==============================================" << endl;
 		cout << "\t\t                  PILIHAN                      \t" << endl;
 		cout << "\t\t==============================================" << endl;
-		cout << "\t\t1. -.Insert.- (Memasukkan nomor plat mobil)" << endl;
-		cout << "\t\t2. -.Delete.- (Mengeluarkan nomor plat mobil)" << endl;
+		cout << "\t\t1. -.Insert.- (Memasukkan plat nomor mobil)" << endl;
+		cout << "\t\t2. -.Delete.- (Mengeluarkan plat nomor mobil)" << endl;
 		cout << "\t\t3. Exit" << endl;
 		
 		cout << "\t\tMasukkan Pilihan (1/2/3) : ";
@@ -84,7 +80,7 @@ int main (){
 		switch (pil){
 		case 1 :
 		{
-			cout << "\nMasukkan Nomor Plat: ";
+			cout << "\nMasukkan Plat nomor: ";
 			cin >> num;
 			insert(num);
 			display();
